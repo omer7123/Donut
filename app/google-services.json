@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "276074650461",
+    "project_id": "donut-1662f",
+    "storage_bucket": "donut-1662f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276074650461:android:13f31eaf3b08b0591c26b4",
+        "android_client_info": {
+          "package_name": "com.ripalay.donut"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276074650461-8mfrl8n9o62p9lho1c4ghl4kva6v7nfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXc1EE3S5Se_4tYqiF_lUS1T9S6hE587o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276074650461-8mfrl8n9o62p9lho1c4ghl4kva6v7nfg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
