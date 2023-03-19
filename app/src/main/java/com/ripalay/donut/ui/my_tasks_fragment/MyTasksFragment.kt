@@ -1,6 +1,11 @@
-package com.ripalay.donut.ui.home_fragment
+package com.ripalay.donut.ui.my_tasks_fragment
 
+import android.os.Bundle
 import android.util.Log
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
@@ -11,37 +16,45 @@ import com.google.firebase.ktx.Firebase
 import com.ripalay.donut.R
 import com.ripalay.donut.core.models.Tasks
 import com.ripalay.donut.core.ui.BaseFragment
-import com.ripalay.donut.databinding.FragmentHomeBinding
+import com.ripalay.donut.databinding.FragmentMyTasksBinding
+import com.ripalay.donut.databinding.FragmentTasksBinding
+import com.ripalay.donut.ui.tasks_fragment.TasksAdapter
+import com.ripalay.donut.ui.tasks_fragment.TasksViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(R.layout.fragment_home) {
-    private lateinit var auth: FirebaseAuth
-    private lateinit var adapter: HomeTasksAdapter
+class MyTasksFragment : BaseFragment<MyTasksViewModel, FragmentMyTasksBinding>(R.layout.fragment_my_tasks) {
+    private lateinit var adapter: TasksAdapter
     private lateinit var navController: NavController
-
     val db = Firebase.firestore
-    val a = Tasks(null, "Помой полы", "Илья", 100, "Помойте, пожалуйста, посуду до моего прихода. Я собираюсь готовить и мне нужна будет свободная раковина.", "all")
-    override val viewModel: HomeViewModel by viewModel()
-    override val binding: FragmentHomeBinding by viewBinding()
+    private lateinit var auth: FirebaseAuth
+
+
+
+    override val viewModel: MyTasksViewModel by viewModel()
+    override val binding: FragmentMyTasksBinding by viewBinding()
 
     override fun initNavController() {
         super.initNavController()
         navController = findNavController()
         auth = Firebase.auth
         val user = auth.currentUser
-
     }
 
     override fun initViews() {
         super.initViews()
-        /*for (i in 0..4) {
-             db.collection("tasks").add(a).addOnCompleteListener { documentReference ->
-                 Log.e("TAG", "DocumentSnapshot added with ID: ")
-             }.addOnFailureListener { e ->
-                 Log.e("TAG", "Error adding document", e)
-             }
-         }*/
         initAdapter()
+    }
+
+    private fun initAdapter() {
+        adapter = TasksAdapter(this::clickListener)
+        binding.tasksRv.adapter = adapter
+    }
+
+    private fun clickListener(task: Tasks) {
+        val bundle = Bundle()
+        bundle.putSerializable("task", task)
+        navController.popBackStack()
+        navController.navigate(R.id.demoFragment, bundle)
 
     }
 
@@ -54,13 +67,5 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(R.layout.f
                 adapter.addItems(tasks)
             }
         }
-    }
-
-    override fun initListeners() {
-        super.initListeners()
-    }
-    private fun initAdapter() {
-        adapter = HomeTasksAdapter()
-        binding.tasksRv.adapter = adapter
     }
 }

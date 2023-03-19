@@ -35,4 +35,14 @@
         android:name="com.ripalay.donut.ui.tasks_fragment.TasksFragment"
         android:label="fragment_tasks"
         tools:layout="@layout/fragment_tasks" />
+    <fragment
+        android:id="@+id/demoFragment"
+        android:name="com.ripalay.donut.ui.demo_task_fragment.DemoFragment"
+        android:label="fragment_demo"
+        tools:layout="@layout/fragment_demo" />
+    <fragment
+        android:id="@+id/hostFragment"
+        android:name="com.ripalay.donut.ui.viewpagerhostfragment.HostFragment"
+        android:label="fragment_host"
+        tools:layout="@layout/fragment_host" />
 </navigation>

@@ -28,14 +28,16 @@ class MainActivity : AppCompatActivity() {
             if ((destination.id == R.id.startFragment)||
                 (destination.id == R.id.registerFragment) ||
                 (destination.id == R.id.signFragment)){
-               // window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-               // window.statusBarColor = ContextCompat.getColor(this, R.color.fon_top)
+                window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+                //window.statusBarColor = ContextCompat.getColor(this, R.color.fon_top)
                 binding.cardNav.visibility = View.GONE
             } else {
                 actionBar?.show()
                 binding.cardNav.visibility = View.VISIBLE
                 window.statusBarColor = ContextCompat.getColor(this, R.color.fon_top)
-
+            }
+            if (destination.id == R.id.tasksFragment){
+                binding.navView.menu.getItem(0).isChecked = true
             }
         }
     }

@@ -1,6 +1,6 @@
 package com.ripalay.donut.di
 
-import com.ripalay.chatforarenda.core.repository.Repository
+import com.ripalay.donut.core.repository.Repository
 import org.koin.core.module.Module
 import org.koin.dsl.module
 

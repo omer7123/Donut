@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <item
-        android:id="@+id/registerFragment"
+        android:id="@+id/hostFragment"
         android:icon="@drawable/ic_task"
         tools:ignore="MenuTitle" />
 

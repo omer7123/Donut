@@ -1,6 +1,9 @@
 package com.ripalay.donut.di
 
+import com.ripalay.donut.ui.demo_task_fragment.DemoFragment
+import com.ripalay.donut.ui.demo_task_fragment.DemoViewModel
 import com.ripalay.donut.ui.home_fragment.HomeViewModel
+import com.ripalay.donut.ui.my_tasks_fragment.MyTasksViewModel
 import com.ripalay.donut.ui.profile_fragment.ProfileViewModel
 import com.ripalay.donut.ui.reg_fragment.RegisterViewModel
 import com.ripalay.donut.ui.sign_fragment.SignViewModel
@@ -17,5 +20,7 @@ val viewModules: Module = module {
     viewModel { ProfileViewModel(get()) }
     viewModel { HomeViewModel(get()) }
     viewModel { TasksViewModel(get()) }
+    viewModel { DemoViewModel(get()) }
+    viewModel { MyTasksViewModel(get()) }
 
 }

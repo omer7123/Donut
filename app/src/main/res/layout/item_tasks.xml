@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="305dp"
+    android:background="@color/white">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/task_tv"
+                style="@style/TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Постирай мои вещи"
+                android:textColor="@color/light_color"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/describe_tv"
+                style="@style/TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/nunito"
+                android:maxLines="3"
+                android:text="@string/describe_test"
+                android:textColor="@color/light_color"
+                android:textFontWeight="500"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/task_tv" />
+
+            <TextView
+                android:id="@+id/ot_tv"
+                style="@style/TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:lineHeight="22sp"
+                android:text="От пользователя: "
+                android:textColor="@color/light_gray"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/describe_tv" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ava_cv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:backgroundTint="@color/light_yellow"
+                android:elevation="12dp"
+                app:cardCornerRadius="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ot_tv">
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_ava" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/author_tv"
+                style="@style/TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/nunito"
+                android:text="Фомин Илья С."
+                android:textColor="@color/light_color"
+                android:textFontWeight="700"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@id/ava_cv"
+                app:layout_constraintTop_toBottomOf="@id/ot_tv" />
+
+            <TextView
+                android:id="@+id/vipoln_tv"
+                style="@style/TextView"
+                android:layout_width="wrap_content"
+                android:textFontWeight="900"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:lineHeight="22sp"
+                android:text="Выполнить до: "
+                android:textColor="@color/light_gray"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ava_cv" />
+
+            <TextView
+                android:id="@+id/date_tv"
+                style="@style/TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="2dp"
+                android:text="21.03.2023"
+                android:textColor="@color/light_color"
+                android:textFontWeight="900"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vipoln_tv" />
+
+            <TextView
+                android:id="@+id/my_ponch_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Мои пончики!"
+                android:fontFamily="@font/nunito"
+                android:textSize="16sp"
+                android:textFontWeight="900"
+                android:textColor="@color/light_gray"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ava_cv" />
+            <ImageView
+                android:id="@+id/donut_iv"
+                android:src="@drawable/ic_little_donut"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/my_ponch_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/price_tv"
+                app:layout_constraintTop_toBottomOf="@id/my_ponch_tv"
+                app:layout_constraintEnd_toStartOf="@id/donut_iv"
+                android:layout_marginEnd="5dp"
+                android:text="155"
+                android:textSize="20sp"
+                android:textFontWeight="900"
+                style="@style/TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

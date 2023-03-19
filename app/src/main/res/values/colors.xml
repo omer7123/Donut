@@ -8,4 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="fon_top">#7B59A5</color>
+    <color name="fon_bot">#BD9BE8</color>
+    <color name="gray">#F5F5F5</color>
+    <color name="yellow">#FFC512</color>
+    <color name="light_gray">#A1A1A1</color>
+    <color name="light_yellow">#FFC512</color>
+    <color name="light_color">#111111</color>
 </resources>

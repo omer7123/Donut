@@ -2,4 +2,11 @@
     <string name="app_name">Donut</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="describe_test">Помой, пожалуйста, посуду до моего прихода. Я собираюсь готовить и мне нужна будет свободная раковина.</string>
+    <string name="task_test">Постирай мои вещи</string>
+    <string name="date_test">27.09.2023</string>
+    <string name="vipoln_do">Выполнить до:</string>
+    <string name="author">Мама</string>
+    <string name="my_tasks">Мои задачи</string>
+    <string name="created_tasks">Созданные задачи</string>
 </resources>
