@@ -33,6 +33,27 @@ class Repository {
         auth = FirebaseAuth.getInstance()
 
         val list = ArrayList<Tasks>()
+
+        db.collection(collect)
+            .addSnapshotListener { snapshots, e ->
+                list.clear()
+                for (document in snapshots!!) {
+                    val task = document.toObject(Tasks::class.java)
+                    Log.e("eeee",auth.currentUser?.displayName.toString())
+                    if ((task.recipient == "all") || (task.recipient == auth.currentUser?.email)) {
+                        task.id = document.id
+                        list.add(task)
+                        Log.e("ololo", list.toString())
+                    }
+                }
+                mutList.postValue(list)
+            }
+        return mutList
+    }
+    fun getRequestTasks(collect: String, db: FirebaseFirestore): MutableLiveData<ArrayList<Tasks>> {
+        auth = FirebaseAuth.getInstance()
+
+        val list = ArrayList<Tasks>()
         db.collection(collect)
             .addSnapshotListener { snapshots, e ->
 

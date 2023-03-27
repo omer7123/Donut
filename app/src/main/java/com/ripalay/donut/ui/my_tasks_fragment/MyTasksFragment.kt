@@ -68,4 +68,12 @@ class MyTasksFragment : BaseFragment<MyTasksViewModel, FragmentMyTasksBinding>(R
             }
         }
     }
+
+    override fun initListeners() {
+        super.initListeners()
+        binding.createBtn.setOnClickListener {
+            navController.popBackStack()
+            navController.navigate(R.id.createTaskFragment)
+        }
+    }
 }

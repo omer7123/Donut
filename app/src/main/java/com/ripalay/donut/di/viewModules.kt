@@ -1,14 +1,17 @@
 package com.ripalay.donut.di
 
+import com.ripalay.donut.ui.create_fragment.CreateViewModel
 import com.ripalay.donut.ui.demo_task_fragment.DemoFragment
 import com.ripalay.donut.ui.demo_task_fragment.DemoViewModel
 import com.ripalay.donut.ui.home_fragment.HomeViewModel
 import com.ripalay.donut.ui.my_tasks_fragment.MyTasksViewModel
 import com.ripalay.donut.ui.profile_fragment.ProfileViewModel
 import com.ripalay.donut.ui.reg_fragment.RegisterViewModel
+import com.ripalay.donut.ui.requests_tasks_fragment.RequestTasksViewModel
 import com.ripalay.donut.ui.sign_fragment.SignViewModel
 import com.ripalay.donut.ui.start_fragment.StartViewModel
 import com.ripalay.donut.ui.tasks_fragment.TasksViewModel
+import com.ripalay.donut.ui.viewpagerhostfragment.HostViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
 import org.koin.dsl.module
@@ -22,5 +25,8 @@ val viewModules: Module = module {
     viewModel { TasksViewModel(get()) }
     viewModel { DemoViewModel(get()) }
     viewModel { MyTasksViewModel(get()) }
+    viewModel { RequestTasksViewModel(get()) }
+    viewModel { HostViewModel(get()) }
+    viewModel { CreateViewModel(get()) }
 
 }

@@ -1,5 +1,6 @@
 package com.ripalay.donut.ui.home_fragment
 
+import android.os.Bundle
 import android.util.Log
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
@@ -20,7 +21,14 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(R.layout.f
     private lateinit var navController: NavController
 
     val db = Firebase.firestore
-    val a = Tasks(null, "Помой полы", "Илья", 100, "Помойте, пожалуйста, посуду до моего прихода. Я собираюсь готовить и мне нужна будет свободная раковина.", "all")
+    val a = Tasks(
+        null,
+        "Запрос",
+        "Илья",
+        200,
+        "Помойте, пожалуйста, посуду до моего прихода. Я собираюсь готовить и мне нужна будет свободная раковина.",
+        "all"
+    )
     override val viewModel: HomeViewModel by viewModel()
     override val binding: FragmentHomeBinding by viewBinding()
 
@@ -34,13 +42,17 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(R.layout.f
 
     override fun initViews() {
         super.initViews()
-        /*for (i in 0..4) {
-             db.collection("tasks").add(a).addOnCompleteListener { documentReference ->
-                 Log.e("TAG", "DocumentSnapshot added with ID: ")
-             }.addOnFailureListener { e ->
-                 Log.e("TAG", "Error adding document", e)
-             }
-         }*/
+        /*for (i in 0..10) {
+            a.task = a.task+i
+            db.collection("requestTasks").add(a).addOnCompleteListener { documentReference ->
+                Log.e("TAG", "DocumentSnapshot added with ID: ")
+                a.id = documentReference.getResult().id
+                db.collection("requestTasks").document(a.id.toString()).update("id",a.id)
+            }.addOnFailureListener { e ->
+                Log.e("TAG", "Error adding document", e)
+            }
+        }*/
+
         initAdapter()
 
     }
@@ -56,11 +68,15 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(R.layout.f
         }
     }
 
-    override fun initListeners() {
-        super.initListeners()
-    }
     private fun initAdapter() {
-        adapter = HomeTasksAdapter()
+        adapter = HomeTasksAdapter(this::clickListener)
         binding.tasksRv.adapter = adapter
     }
+    fun clickListener(tasks: Tasks) {
+        val bundle = Bundle()
+        bundle.putSerializable("task", tasks)
+        navController.navigate(R.id.demoFragment, bundle)
+    }
 }
+
+

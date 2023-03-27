@@ -9,4 +9,5 @@
     <string name="author">Мама</string>
     <string name="my_tasks">Мои задачи</string>
     <string name="created_tasks">Созданные задачи</string>
+    <string name="get_requests">Полученные запросы</string>
 </resources>

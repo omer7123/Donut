@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Android Studio Project/Donut/app/src/main/res/drawable/bg_ava_circle.xml" value="0.168" />
         <entry key="..\:/Android Studio Project/Donut/app/src/main/res/drawable/bg_edit.xml" value="0.168" />
+        <entry key="..\:/Android Studio Project/Donut/app/src/main/res/drawable/bg_edit_text.xml" value="0.168" />
         <entry key="..\:/Android Studio Project/Donut/app/src/main/res/drawable/bg_fon.xml" value="0.15" />
         <entry key="..\:/Android Studio Project/Donut/app/src/main/res/drawable/bg_little_circle.xml" value="0.168" />
         <entry key="..\:/Android Studio Project/Donut/app/src/main/res/drawable/bg_underlinet_v.xml" value="0.168" />
@@ -17,17 +18,22 @@
         <entry key="..\:/Android Studio Project/Donut/app/src/main/res/drawable/nav_bar_home_selection.xml" value="0.168" />
         <entry key="..\:/Android Studio Project/Donut/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Android Studio Project/Donut/app/src/main/res/layout/activity_view_pager_host.xml" value="0.234375" />
+        <entry key="..\:/Android Studio Project/Donut/app/src/main/res/layout/fragment_create_task.xml" value="0.25" />
         <entry key="..\:/Android Studio Project/Donut/app/src/main/res/layout/fragment_demo.xml" value="0.25" />
+        <entry key="..\:/Android Studio Project/Donut/app/src/main/res/layout/fragment_demo_request.xml" value="0.234375" />
         <entry key="..\:/Android Studio Project/Donut/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Android Studio Project/Donut/app/src/main/res/layout/fragment_host.xml" value="0.234375" />
         <entry key="..\:/Android Studio Project/Donut/app/src/main/res/layout/fragment_my_task.xml" value="0.234375" />
-        <entry key="..\:/Android Studio Project/Donut/app/src/main/res/layout/fragment_my_tasks.xml" value="0.234375" />
+        <entry key="..\:/Android Studio Project/Donut/app/src/main/res/layout/fragment_my_tasks.xml" value="0.264" />
         <entry key="..\:/Android Studio Project/Donut/app/src/main/res/layout/fragment_profile.xml" value="0.234375" />
         <entry key="..\:/Android Studio Project/Donut/app/src/main/res/layout/fragment_register.xml" value="0.234375" />
+        <entry key="..\:/Android Studio Project/Donut/app/src/main/res/layout/fragment_request_tasks.xml" value="0.234375" />
         <entry key="..\:/Android Studio Project/Donut/app/src/main/res/layout/fragment_sign.xml" value="0.234375" />
         <entry key="..\:/Android Studio Project/Donut/app/src/main/res/layout/fragment_start.xml" value="0.2" />
         <entry key="..\:/Android Studio Project/Donut/app/src/main/res/layout/fragment_tasks.xml" value="0.234375" />
         <entry key="..\:/Android Studio Project/Donut/app/src/main/res/layout/item_home_tasks.xml" value="0.25" />
         <entry key="..\:/Android Studio Project/Donut/app/src/main/res/layout/item_home_tasks_dark.xml" value="0.25" />
+        <entry key="..\:/Android Studio Project/Donut/app/src/main/res/layout/item_request.xml" value="0.234375" />
         <entry key="..\:/Android Studio Project/Donut/app/src/main/res/layout/item_tasks.xml" value="0.25" />
         <entry key="..\:/Android Studio Project/Donut/app/src/main/res/layout/item_tasks_light.xml" value="0.25" />
         <entry key="..\:/Android Studio Project/Donut/app/src/main/res/menu/menu.xml" value="0.234375" />

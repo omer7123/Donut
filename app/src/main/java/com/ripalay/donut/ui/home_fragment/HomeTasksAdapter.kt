@@ -11,10 +11,11 @@ import com.ripalay.donut.databinding.ItemTasksBinding
 import com.ripalay.donut.databinding.ItemTasksLightBinding
 import com.ripalay.donut.ui.tasks_fragment.TasksAdapter
 
-class HomeTasksAdapter() :
+class HomeTasksAdapter(private val clickListener: (task: Tasks) -> Unit) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private val list: ArrayList<Tasks> = ArrayList<Tasks>()
+
 
     override fun getItemViewType(position: Int): Int {
         var i = 0
@@ -33,15 +34,22 @@ class HomeTasksAdapter() :
             binding.personTv.text = tasks.author
             binding.priceTv.text = tasks.price.toString()
             binding.tasksTv.text = tasks.task
+            binding.root.setOnClickListener {
+                clickListener(tasks)
+            }
         }
 
     }
+
     inner class ViewHolderDark(private val binding: ItemHomeTasksDarkBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun onBind(tasks: Tasks) {
             binding.personTv.text = tasks.author
             binding.priceTv.text = tasks.price.toString()
             binding.tasksTv.text = tasks.task
+            binding.root.setOnClickListener {
+                clickListener(tasks)
+            }
         }
 
     }

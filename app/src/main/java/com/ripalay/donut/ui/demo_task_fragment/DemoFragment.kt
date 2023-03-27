@@ -27,7 +27,7 @@ class DemoFragment : BaseFragment<DemoViewModel, FragmentDemoBinding>(R.layout.f
         val task: Tasks? = requireArguments().getSerializable("task") as Tasks?
         binding.describeTv.text = task?.describe
         binding.tasksTv.text = task?.task
-        binding.authorNameTv.text = task?.author
+        binding.authorTv.text = task?.author
         binding.priceTv.text = task?.price.toString()
 
     }

@@ -22,8 +22,8 @@
 
             <ImageView
                 android:id="@+id/logo_iv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="162dp"
+                android:layout_height="40dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="25dp"
                 android:fontFamily="@font/nunito_bold"
@@ -33,40 +33,39 @@
                 android:textFontWeight="900"
                 android:textSize="32sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/donut_coin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
                 android:layout_marginEnd="20dp"
                 android:src="@drawable/ic_donut"
-                android:layout_marginTop="25dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
                 android:layout_marginEnd="5dp"
                 android:fontFamily="@font/nunito_bold"
+
                 android:text="285"
-                android:layout_marginTop="26dp"
                 android:textColor="@color/black"
                 android:textFontWeight="900"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toStartOf="@id/donut_coin"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tabLayout"
                 style="@style/MyCustomTabLayout"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@color/white"
                 android:layout_marginTop="15dp"
+                android:background="@color/white"
                 app:layout_constraintTop_toBottomOf="@id/logo_iv"
                 app:tabGravity="fill"
                 app:tabIndicatorColor="@color/yellow"
@@ -76,7 +75,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.appcompat.widget.Toolbar>
-
 
 
     <androidx.viewpager2.widget.ViewPager2

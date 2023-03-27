@@ -17,6 +17,8 @@ class TasksAdapter(
     inner class ViewHolder(private val binding: ItemTasksBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun onBind(tasks: Tasks) {
+            Log.e("Ololo", tasks.task.toString())
+
             binding.authorTv.text = tasks.author
             binding.priceTv.text = tasks.price.toString()
             binding.taskTv.text = tasks.task
@@ -54,4 +56,5 @@ class TasksAdapter(
         Log.e("ololo", baseList.size.toString())
         notifyDataSetChanged()
     }
+
 }

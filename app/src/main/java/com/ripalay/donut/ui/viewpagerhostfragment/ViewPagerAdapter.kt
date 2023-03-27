@@ -14,4 +14,5 @@ class ViewPagerAdapter(fragment: Fragment): FragmentStateAdapter(fragment) {
         return list[position]
     }
 
+
 }

@@ -30,10 +30,10 @@ class MainActivity : AppCompatActivity() {
                 (destination.id == R.id.signFragment)){
                 window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
                 //window.statusBarColor = ContextCompat.getColor(this, R.color.fon_top)
-                binding.cardNav.visibility = View.GONE
+                binding.navView.visibility = View.GONE
             } else {
                 actionBar?.show()
-                binding.cardNav.visibility = View.VISIBLE
+                binding.navView.visibility = View.VISIBLE
                 window.statusBarColor = ContextCompat.getColor(this, R.color.fon_top)
             }
             if (destination.id == R.id.tasksFragment){

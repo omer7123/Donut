@@ -10,13 +10,14 @@ import com.ripalay.donut.databinding.FragmentHostBinding
 import com.ripalay.donut.ui.demo_task_fragment.DemoViewModel
 import com.ripalay.donut.ui.my_tasks_fragment.MyTasksFragment
 import com.ripalay.donut.ui.reg_fragment.RegisterFragment
+import com.ripalay.donut.ui.requests_tasks_fragment.RequestTasksFragment
 import com.ripalay.donut.ui.tasks_fragment.TasksFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class HostFragment : BaseFragment<DemoViewModel, FragmentHostBinding>(R.layout.fragment_host) {
+class HostFragment : BaseFragment<HostViewModel, FragmentHostBinding>(R.layout.fragment_host) {
 
 
-    override val viewModel: DemoViewModel by viewModel()
+    override val viewModel: HostViewModel by viewModel()
     override val binding: FragmentHostBinding by viewBinding()
 
     private val adapter: ViewPagerAdapter by lazy { ViewPagerAdapter(this) }
@@ -30,7 +31,9 @@ class HostFragment : BaseFragment<DemoViewModel, FragmentHostBinding>(R.layout.f
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         initFragment()
+        //adapter.ref()
     }
 
     override fun initViews() {
@@ -41,11 +44,11 @@ class HostFragment : BaseFragment<DemoViewModel, FragmentHostBinding>(R.layout.f
         }.attach()
 
     }
+
+
     private fun initFragment() {
         adapter.list.add(TasksFragment())
         adapter.list.add(MyTasksFragment())
-        adapter.list.add(TasksFragment())
-
+        adapter.list.add(RequestTasksFragment())
     }
-
 }

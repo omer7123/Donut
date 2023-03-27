@@ -31,6 +31,7 @@ class TasksFragment : BaseFragment<TasksViewModel, FragmentTasksBinding>(R.layou
         navController = findNavController()
         auth = Firebase.auth
         val user = auth.currentUser
+        Log.e("Start", "START")
     }
 
     override fun initViews() {
